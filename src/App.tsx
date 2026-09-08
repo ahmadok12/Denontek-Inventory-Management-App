@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, BarChart2, Settings, Smartphone, Maximize2, Wifi, Battery } from 'lucide-react';
+import { Home, BarChart2, Settings, Smartphone, Maximize2 } from 'lucide-react';
 import type { TabType } from './types';
 import { InventoryProvider, useInventory } from './context/InventoryContext';
 import { HomeScreen } from './components/home/HomeScreen';
@@ -52,23 +52,7 @@ const MainApp: React.FC = () => {
             : 'max-w-md h-[100dvh] shadow-lg'
         } h-[100dvh]`}
       >
-        {/* iOS/Mobile Mockup Status Bar */}
-        <div className="bg-white px-6 pt-3 pb-2 flex items-center justify-between border-b border-slate-100 text-xs font-semibold text-slate-800 shrink-0 select-none">
-          <div className="flex items-center gap-2">
-            <span className="tracking-tight text-[11px] font-bold">Denontek</span>
-            <span className="text-[9px] bg-slate-100 px-1.5 py-0.5 rounded text-slate-600 font-mono">
-              v1.0
-            </span>
-          </div>
 
-          {/* Notch indicator for phone frame */}
-          <div className="hidden sm:block w-20 h-4 bg-slate-900 rounded-full mx-auto -mt-1 shadow-inner" />
-
-          <div className="flex items-center gap-2 text-slate-700">
-            <Wifi className="w-3.5 h-3.5" />
-            <Battery className="w-4 h-4" />
-          </div>
-        </div>
 
         {/* Tab Content Area */}
         <main className="flex-1 overflow-hidden relative flex flex-col">
